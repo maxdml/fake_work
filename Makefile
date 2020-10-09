@@ -1,8 +1,7 @@
-DIR=/opt/fake_work/
 CFLAGS = -Wno-register -O3 -mtune=intel -DNDEBUG
 
 mb: libfake
-	$(CXX) -I$(DIR) -L$(DIR) mb.cc -o mb -lfake $(CFLAGS)
+	$(CXX) -I. -L. mb.cc -o mb -lfake $(CFLAGS)
 	chmod +x mb
 
 libfake:
