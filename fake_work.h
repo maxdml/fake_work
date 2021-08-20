@@ -20,7 +20,7 @@ static inline uint64_t fw_rdtscp(uint32_t *auxp) {
     return ((uint64_t)a) | (((uint64_t)d) << 32);
 }
 
-void fake_work(unsigned int nloops) {
+inline static void fake_work(unsigned int nloops) {
     for (unsigned int i = 0; i++ < nloops;) {
         asm volatile("nop");
     }
